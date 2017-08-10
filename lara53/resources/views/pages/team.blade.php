@@ -3,7 +3,8 @@
 Team
 @end
 @section('body')
-
+<div class="panel panel-header">
+</div>
 <div class="container">
 <div class="row">
   <div class="col-md-4">
