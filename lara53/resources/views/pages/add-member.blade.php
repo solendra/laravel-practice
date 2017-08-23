@@ -11,11 +11,12 @@ add member
 
     
 
-    
+       @include('pages.errors')
+
     	<div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
-      
+
 
     </div>
     <div class="form-group">
@@ -28,7 +29,7 @@ add member
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 
-    @include('pages.errors')
+   
 
   </form>
 
