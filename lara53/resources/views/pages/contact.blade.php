@@ -6,6 +6,12 @@ Contact Us
 <div class="container" >
 <div class="well">
 <form method="" action="/contact">
+
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" class="form-control" name="email" id="email">
+</div>
+
 <div class="form-group">
 <label for="name">Full Name:</label>
 <input type="text" class="form-control" name="name" id="name">

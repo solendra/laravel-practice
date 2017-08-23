@@ -8,7 +8,7 @@
       <li class="active"><a href="/members">Members</a></li>
       <li><a href="/contact">Contact </a></li>
       <li><a href="/location">Location</a></li>
-      <li><a href="">Team</a></li>
+      <li><a href="/team">Team</a></li>
        
     </ul>
   </div>

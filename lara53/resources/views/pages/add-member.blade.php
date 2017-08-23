@@ -8,10 +8,15 @@ add member
 
 <form  action="/members" method="POST">
       {{ csrf_field() }}
+
+    
+
     
     	<div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+      
+
     </div>
     <div class="form-group">
       <label for="address">Address:</label>
@@ -19,9 +24,12 @@ add member
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder=" Enter Email" name="email">
+      <input type="text" class="form-control" id="email" placeholder=" Enter Email" name="email">
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    @include('pages.errors')
+
   </form>
 
 </div>

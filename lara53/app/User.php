@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
+use Laravel\Scout\Searchable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable

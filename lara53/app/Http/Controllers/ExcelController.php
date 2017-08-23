@@ -36,15 +36,42 @@ public function exportMembersCSV(){
 
 }
 
-public function importexcel(){
-  Excel::load(Input::file('file_upload'),function($reader){
+public function importexcel(Request $request){
+
+  $rules=array(
+    'file_upload'=>'required|max:50000|mimes:xlsx,csv'
+    );
+  $msg=[
+  'file_upload.required'=>'please select file',
+  'file_upload.mimes'=>'please upload excel or csv format file',
+  'file_upload.max'=>'File size is more'
+  ];
+
+  if ( $this->validate($request, $rules,$msg)) {
+    Excel::load(Input::file('file_upload'),function($reader){
    $reader->each(function($sheet){
       foreach ($sheet->toArray() as $row) {
          Member::firstOrCreate($sheet->toArray());
          }
    });
   });
-  return redirect('members');
-}
+  return redirect('members');  } 
 
+  else {
+    return redirect('members')-withErrors($msg);
+  }
+  
+//   $this->validate($request, $rules,$msg);
+
+//   Excel::load(Input::file('file_upload'),function($reader){
+//    $reader->each(function($sheet){
+//       foreach ($sheet->toArray() as $row) {
+//          Member::firstOrCreate($sheet->toArray());
+//          }
+//    });
+//   });
+//   return redirect('members');
+// }
+
+}
 }

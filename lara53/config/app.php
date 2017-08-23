@@ -165,7 +165,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-
+        Laravel\Scout\ScoutServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
@@ -183,6 +183,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
 
     ],
 

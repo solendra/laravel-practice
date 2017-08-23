@@ -50,8 +50,10 @@ Members
        <input type="file" name="file_upload" style="display: none; float:right"> Browse File 
     </label>
     <button type="submit" class="btn btn-success" style="float:left">Upload</button>
-
+   
+    @include('pages.errors')
 </form>
+
 </div>
 
 <div class="col-lg-2">
@@ -92,12 +94,14 @@ Members
 
 
 	<div class="col-lg-6">
+	<form method="GET" action="/members" >
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Search Here">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Search</button>
+      <button class="btn btn-default" type="submit"> Search </button>
       </span>
     </div><!-- /input-group -->
+    </form>
   </div><!-- /.col-lg-6 -->
 </div>
 <table class="table table-striped">

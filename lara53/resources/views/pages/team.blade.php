@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('title')
 Team
-@end
+@stop
 @section('body')
 <div class="panel panel-header">
 </div>
@@ -39,4 +39,4 @@ Team
   </div>
 </div>
 </div>
-@end
+@stop
